@@ -2,6 +2,6 @@
 for i in range(0, 10):
     for j in range(i + 1, 10):
         if i == 8:
-            print(f"{i:d}{j:d}")
+            print("{0:d}{1:d}".format(i, j))
         else:
-            print(f"{i:d}{j:d}", end=', ')
+            print("{0:d}{1:d}".format(i, j), end=', ')
