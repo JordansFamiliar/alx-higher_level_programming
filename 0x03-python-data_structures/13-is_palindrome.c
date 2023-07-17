@@ -10,34 +10,37 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *node = *head;
-	size_t i;
-	char *num = NULL, temp[2];
+	size_t i = 0, size = 0;
+	char *num = NULL, *start, *end;
 
-	if (*head == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 	while (node != NULL)
 	{
-		temp[0] = node->n + '0';
-		temp[1] = '\0';
-		if (num == NULL)
-		{
-			num = malloc(2 * sizeof(char));
-			strcpy(num, temp);
-		}
-		else
-		{
-			num = realloc(num, (strlen(num) + 2) * sizeof(char));
-			strcat(num, temp);
-		}
+		size++;
 		node = node->next;
 	}
-	for (i = 0; i <= strlen(num) - i - 1; i++)
+	num = malloc(size * sizeof(char));
+	if (num == NULL)
+		return (0);
+	node = *head;
+	while (node != NULL)
 	{
-		if (num[i] != num[strlen(num) - i - 1])
+		num[i] = node->n + '0';
+		node = node->next;
+		i++;
+	}
+	start = num;
+	end = num + size - 1;
+	while (start < end)
+	{
+		if (*start != *end)
 		{
 			free(num);
 			return (0);
 		}
+		start++;
+		end--;
 	}
 	free(num);
 	return (1);
