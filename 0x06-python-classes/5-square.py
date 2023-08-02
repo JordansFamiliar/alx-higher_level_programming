@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A module that contains the definition of class square.
+"""
+
 
 class Square:
     """A class representing a square shape.
