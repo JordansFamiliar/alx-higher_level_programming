@@ -38,6 +38,7 @@ class Rectangle:
     """
     print_symbol = '#'
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
@@ -111,7 +112,9 @@ class Rectangle:
         """A method __repr__ that returns a string representation
         of the rectangle to be able to recreate a new instance.
         """
-        return "Rectangle(" + str(self.__width) + "," + str(self.__height) + ")"
+        return "Rectangle(" + str(self.__width) + "," + str(self.__height) + \
+            ")"
+
     def __del__(self):
         """A method that ensures proper deletion of an instance
         of Rectangle.

@@ -77,6 +77,7 @@ class Rectangle:
         """An instance method perimeter that returns the
         perimeter of the rectangle.
         """
+
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
@@ -99,4 +100,5 @@ class Rectangle:
         """A method __repr__ that returns a string representation
         of the rectangle to be able to recreate a new instance.
         """
-        return "Rectangle(" + str(self.__width) + "," + str(self.__height) + ")"
+        return "Rectangle(" + str(self.__width) + "," + str(self.__height) + \
+            ")"
