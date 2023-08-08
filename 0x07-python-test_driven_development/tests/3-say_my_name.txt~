@@ -1,0 +1,39 @@
+The ``3-say_my_name`` module
+============================
+
+Using ``say_my_name``
+---------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+>>> say_my_name("Alice")
+My name is Alice
+
+>>> say_my_name("")
+
+>>> try:
+...     say_my_name(None, "Smith")
+... except TypeError as e:
+...     str(e)
+'first_name must be a string'
+
+>>> try:
+...     say_my_name("Mary", None)
+... except TypeError as e:
+...     str(e)
+'last_name must be a string'
+
+>>> try:
+...     say_my_name(123, "Doe")
+... except TypeError as e:
+...     str(e)
+'first_name must be a string'
+
+>>> try:
+...     say_my_name("John", 456)
+... except TypeError as e:
+...     str(e)
+'last_name must be a string'

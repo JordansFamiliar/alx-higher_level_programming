@@ -1,0 +1,72 @@
+The ''0-add_integer'' module
+============================
+
+Using ''add_integer''
+---------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(-5, 10)
+5
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(2.0, 3.5)
+5
+
+>>> add_integer(-5.3, 10.7)
+5
+
+>>> add_integer(0.0, 0.0)
+0
+
+>>> add_integer(2, 3.5)
+5
+
+>>> add_integer(-5.3, 10)
+5
+
+>>> add_integer(0, 0.0)
+0
+
+>>> add_integer(2)
+100
+
+>>> add_integer(-5)
+93
+
+>>> add_integer(0)
+98
+
+>>> try:
+...     add_integer(2, "3")
+... except TypeError as e:
+...     str(e)
+'b must be an integer'
+
+>>> try:
+...     add_integer("2", 3)
+... except TypeError as e:
+...     str(e)
+'a must be an integer'
+
+>>> try:
+...     add_integer("2", "3")
+... except TypeError as e:
+...     str(e)
+'a must be an integer'
+
+>>> try:
+...     add_integer(None, 3)
+... except TypeError as e:
+...     str(e)
+'a must be an integer'
+
+>>> try:
+...     add_integer(2, None)
+... except TypeError as e:
+...     str(e)
+'b must be an integer'
