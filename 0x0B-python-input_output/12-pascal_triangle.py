@@ -24,8 +24,8 @@ def pascal_triangle(n):
             if columns == 0 or columns == rows:
                 value = 1
             else:
-                value = ret_list[rows - 1][columns - 1] + ret_list[rows - 1]\
-                    [columns]
+                value = ret_list[rows - 1][columns - 1] + \
+                    ret_list[rows - 1][columns]
             col.append(value)
         ret_list.append(col)
     return ret_list
