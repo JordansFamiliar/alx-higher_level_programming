@@ -152,6 +152,4 @@ class Base:
             for i in range(4):
                 t.forward(obj.size)
                 t.right(90)
-
-        t.done()
-        t.exitonclick()
+        turtle.bye()
