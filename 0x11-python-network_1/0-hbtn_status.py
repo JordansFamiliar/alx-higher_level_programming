@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""A script that fetches the status of a url"""
+"""A script that fetches
+   the status of a url
+"""
 
 import urllib.request
 
