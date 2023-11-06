@@ -2,10 +2,6 @@
 """
 This Python script is designed to solve a specific
 challenge by making a request to the GitHub API.
-It takes two command-line arguments, the owner of
-a GitHub repository and the repository name,
-to retrieve and display information about the latest
-10 commits for that repository.
 """
 
 import requests
